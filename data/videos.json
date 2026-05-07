@@ -5,23 +5,23 @@
     "channel": "Yannic Kilcher",
     "published_at": "2026-03-06T22:07:33Z",
     "topics": [
-      "自动化生成文本",
-      "语言模型的应用",
-      "对话理解与生成"
+      "无法获取字幕"
     ],
-    "key_point": "视频展示了一个完全自动化的“mansplainer”系统，利用大语言模型自动识别并解释对话中错误的观点，体现了LLM在自动化解释和纠正中的潜力。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:02:51.174189"
+    "key_point": "All information about GTC and the DGX Spark Raffle is here: https://www.ykilcher.com/gtc Links: Homepage: https://ykilcher.com ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:05.622323"
   },
   {
     "video_id": "Dr6jw-WAd9E",
     "title": "Traditional X-Mas Stream",
     "channel": "Yannic Kilcher",
     "published_at": "2025-12-29T03:44:20Z",
-    "topics": [],
-    "key_point": "视频内容主要是关于圣诞节期间进行的Minecraft直播，没有涉及大语言模型相关主题。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:02:59.711666"
+    "topics": [
+      "无法获取字幕"
+    ],
+    "key_point": "Letsgooo.",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:11.509578"
   },
   {
     "video_id": "taCVT5vDAk0",
@@ -29,15 +29,11 @@
     "channel": "Yannic Kilcher",
     "published_at": "2025-12-27T14:33:29Z",
     "topics": [
-      "扩散模型",
-      "自回归模型",
-      "TiDaR方法",
-      "Nvidia研究",
-      "GPU利用率优化"
+      "无法获取字幕"
     ],
-    "key_point": "TiDaR结合了扩散思考和自回归生成的优势，有效提升了大语言模型的性能和计算效率。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:03:08.390272"
+    "key_point": "Paper: https://arxiv.org/abs/2511.08923 Abstract: Diffusion language models hold the promise of fast parallel generation, while ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:17.389525"
   },
   {
     "video_id": "v67plFw1nMw",
@@ -45,15 +41,11 @@
     "channel": "Yannic Kilcher",
     "published_at": "2025-12-14T16:22:15Z",
     "topics": [
-      "记忆机制",
-      "测试时学习",
-      "大语言模型优化",
-      "Google研究",
-      "论文解析"
+      "无法获取字幕"
     ],
-    "key_point": "视频介绍了Google提出的Titans方法，该方法通过在测试时学习来增强大语言模型的记忆能力，从而提升模型的表现。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:03:16.585599"
+    "key_point": "Paper: https://arxiv.org/abs/2501.00663 Abstract: Over more than a decade there has been an extensive research effort on how to ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:23.303458"
   },
   {
     "video_id": "Nao16-6l6dQ",
@@ -61,14 +53,11 @@
     "channel": "Yannic Kilcher",
     "published_at": "2025-11-01T17:39:06Z",
     "topics": [
-      "Transformer架构",
-      "变分自编码器（VAE）",
-      "自由Transformer（Free Transformer）",
-      "潜变量模型"
+      "无法获取字幕"
     ],
-    "key_point": "视频介绍了来自法国Farret Meta的Free Transformer模型，该模型扩展了经典的基于解码器的Transformer结构，结合了一系列潜变量，融合了变分自编码器的思想。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:03:25.192228"
+    "key_point": "https://arxiv.org/abs/2510.17558 Abstract: We propose an extension of the decoder Transformer that conditions its generative ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:29.224279"
   },
   {
     "video_id": "p7K3xfViWCE",
@@ -76,14 +65,11 @@
     "channel": "Two Minute Papers",
     "published_at": "2026-05-06T16:07:54Z",
     "topics": [
-      "DeepSeek 4",
-      "大语言模型性能",
-      "免费AI系统",
-      "研究论文解读"
+      "无法获取字幕"
     ],
-    "key_point": "DeepSeek 4是一款基于最新研究的免费AI系统，能够超越市面上价值数十亿美元的系统，且所有技术细节均公开透明。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:03:43.624889"
+    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Check out DeepSeek here: ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:45.213696"
   },
   {
     "video_id": "eCw33snvoNI",
@@ -91,13 +77,11 @@
     "channel": "Two Minute Papers",
     "published_at": "2026-05-03T17:02:48Z",
     "topics": [
-      "图像生成",
-      "3D世界构建",
-      "AI视觉模型"
+      "无法获取字幕"
     ],
-    "key_point": "NVIDIA开发了一种AI技术，可以仅凭一张照片生成一个可探索的3D虚拟世界，且该世界不会出现断裂或破损。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:03:51.848624"
+    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers The paper is available here: ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:51.243102"
   },
   {
     "video_id": "QzZ4VwDHAT4",
@@ -105,36 +89,34 @@
     "channel": "Two Minute Papers",
     "published_at": "2026-05-01T16:43:34Z",
     "topics": [
-      "大语言模型应用",
-      "AI模拟器",
-      "交互式AI体验"
+      "无法获取字幕"
     ],
-    "key_point": "视频介绍了Sakana AI实验室开发的‘神模拟器’，展示了基于大语言模型的创新交互体验，强调其独特且极具趣味性的设计。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:04:00.495884"
+    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Try it out! The paper is available here: ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:11:57.103849"
   },
   {
-    "video_id": "Io_GqmbNBbY",
-    "title": "DeepMind’s New AI Just Changed Science Forever",
+    "video_id": "Sk9tvyRSCgY",
+    "title": "DeepMind’s New AI: A Gift To Humanity",
     "channel": "Two Minute Papers",
-    "published_at": "2026-03-27T16:00:57Z",
+    "published_at": "2026-04-16T17:44:48Z",
     "topics": [
-      "DeepMind最新AI技术",
-      "AI在科学研究中的应用",
-      "大语言模型的突破"
+      "无法获取字幕"
     ],
-    "key_point": "DeepMind发布的新型AI技术极大地推动了科学研究的进步，标志着AI在科学领域的革命性变革。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:04:09.095441"
+    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Links: ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:12:02.961828"
   },
   {
-    "video_id": "wp8d24NkOjI",
-    "title": "The Bug That Ruined Game Physics For Decades",
+    "video_id": "mFSFvKquXwI",
+    "title": "NVIDIA’s New AI Shouldn’t Work…But It Does",
     "channel": "Two Minute Papers",
-    "published_at": "2025-12-31T11:22:02Z",
-    "topics": [],
-    "key_point": "视频讲述了一个影响游戏物理模拟数十年的程序错误，强调了我们看到的现象背后隐藏的问题，而非表面现象本身。",
-    "relation": "独立内容",
-    "last_updated": "2026-05-07T05:04:17.147030"
+    "published_at": "2026-04-11T16:23:48Z",
+    "topics": [
+      "无法获取字幕"
+    ],
+    "key_point": "Check out Weights & Biases and sign up for a free demo here: https://wandb.me/papers The paper is available here: ...",
+    "relation": "无法判断",
+    "last_updated": "2026-05-07T05:12:08.838038"
   }
 ]
