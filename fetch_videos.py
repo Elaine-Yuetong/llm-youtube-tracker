@@ -48,12 +48,24 @@ def get_videos_from_channel(channel_id, max_results=5):
     return videos
 
 def get_transcript(video_id):
-    """用 youtube_transcript_api 获取字幕（不需要 cookies，更稳定）"""
+    """用 youtube_transcript_api 获取字幕（兼容新旧版本）"""
     try:
-        transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
-        full_text = ' '.join([line['text'] for line in transcript_list])
-        print(f"  获取字幕成功，长度: {len(full_text)}")
-        return full_text
+        from youtube_transcript_api import YouTubeTranscriptApi
+        
+        # 方法1：尝试新版 API（先实例化）
+        try:
+            transcript_list = YouTubeTranscriptApi().list_transcripts(video_id)
+            transcript = transcript_list.find_generated_transcript(['en', 'en-US', 'en-GB'])
+            lines = transcript.fetch()
+            full_text = ' '.join([line['text'] for line in lines])
+            print(f"  获取字幕成功（新版API），长度: {len(full_text)}")
+            return full_text
+        except:
+            # 方法2：尝试旧版 API（直接调用）
+            transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'en-US', 'en-GB'])
+            full_text = ' '.join([line['text'] for line in transcript_list])
+            print(f"  获取字幕成功（旧版API），长度: {len(full_text)}")
+            return full_text
     except Exception as e:
         print(f"  获取字幕失败: {e}")
         return None

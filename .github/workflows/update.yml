@@ -21,7 +21,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install google-api-python-client yt-dlp openai streamlit pandas youtube-transcript-api
+          pip install google-api-python-client yt-dlp openai streamlit pandas youtube-transcript-api==0.6.1
       
       - name: Run fetch script
         env:
