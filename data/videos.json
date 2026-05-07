@@ -1,122 +1,156 @@
 [
   {
-    "video_id": "xHi8PUIVyoo",
-    "title": "I BUILT A FULLY AUTOMATIC MANSPLAINER",
-    "channel": "Yannic Kilcher",
-    "published_at": "2026-03-06T22:07:33Z",
+    "video_id": "EWvNQjAaOHw",
+    "title": "How I use LLMs",
+    "channel": "Andrej Karpathy",
+    "published_at": "2025-02-27T22:29:56Z",
     "topics": [
-      "无法获取字幕"
+      "大型语言模型介绍",
+      "LLM的应用方法",
+      "LLM的深入解析"
     ],
-    "key_point": "All information about GTC and the DGX Spark Raffle is here: https://www.ykilcher.com/gtc Links: Homepage: https://ykilcher.com ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:26:26.822736"
+    "key_point": "视频主要介绍了作者如何使用大型语言模型，并继续为普通观众讲解相关知识，帮助理解和应用LLM。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:41:55.195298"
   },
   {
-    "video_id": "Dr6jw-WAd9E",
-    "title": "Traditional X-Mas Stream",
-    "channel": "Yannic Kilcher",
-    "published_at": "2025-12-29T03:44:20Z",
+    "video_id": "7xTGNNLPyMI",
+    "title": "Deep Dive into LLMs like ChatGPT",
+    "channel": "Andrej Karpathy",
+    "published_at": "2025-02-05T18:23:47Z",
     "topics": [
-      "无法获取字幕"
+      "大型语言模型介绍",
+      "ChatGPT",
+      "LLM的基本原理",
+      "面向大众的综合介绍"
     ],
-    "key_point": "Letsgooo.",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:26:31.827859"
+    "key_point": "本视频旨在为广大观众提供一个关于大型语言模型（如ChatGPT）的全面且通俗的介绍，帮助理解其基本概念和应用。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:42:04.483931"
   },
   {
-    "video_id": "taCVT5vDAk0",
-    "title": "TiDAR: Think in Diffusion, Talk in Autoregression (Paper Analysis)",
-    "channel": "Yannic Kilcher",
-    "published_at": "2025-12-27T14:33:29Z",
+    "video_id": "l8pRSuU81PU",
+    "title": "Let&#39;s reproduce GPT-2 (124M)",
+    "channel": "Andrej Karpathy",
+    "published_at": "2024-06-09T23:31:35Z",
     "topics": [
-      "无法获取字幕"
+      "GPT-2复现",
+      "模型架构",
+      "训练流程",
+      "参数规模"
     ],
-    "key_point": "Paper: https://arxiv.org/abs/2511.08923 Abstract: Diffusion language models hold the promise of fast parallel generation, while ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:26:36.832975"
+    "key_point": "本视频旨在通过实际操作复现GPT-2 124M版本，深入讲解其模型架构和训练细节，帮助观众理解大型语言模型的实现过程。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:42:13.972063"
   },
   {
-    "video_id": "v67plFw1nMw",
-    "title": "Titans: Learning to Memorize at Test Time (Paper Analysis)",
-    "channel": "Yannic Kilcher",
-    "published_at": "2025-12-14T16:22:15Z",
+    "video_id": "6nUl_w5W9Wk",
+    "title": "Stanford CS153 Frontier Systems | Amit Jain from Luma AI on Unified Intelligence Systems",
+    "channel": "Stanford Online",
+    "published_at": "2026-05-06T21:07:28Z",
     "topics": [
-      "无法获取字幕"
+      "统一智能系统",
+      "大语言模型应用",
+      "多模态融合",
+      "人工智能系统架构"
     ],
-    "key_point": "Paper: https://arxiv.org/abs/2501.00663 Abstract: Over more than a decade there has been an extensive research effort on how to ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:26:41.838111"
+    "key_point": "视频探讨了如何通过统一智能系统整合多模态信息和大语言模型，推动人工智能系统的前沿发展。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:42:33.725069"
   },
   {
-    "video_id": "Nao16-6l6dQ",
-    "title": "[Paper Analysis] The Free Transformer (and some Variational Autoencoder stuff)",
-    "channel": "Yannic Kilcher",
-    "published_at": "2025-11-01T17:39:06Z",
+    "video_id": "knX-ekyjxF4",
+    "title": "Stanford Online AI Programs Top Questions: When and How to Enroll in Online AI Courses",
+    "channel": "Stanford Online",
+    "published_at": "2026-05-04T23:19:28Z",
     "topics": [
-      "无法获取字幕"
+      "在线AI课程报名流程",
+      "AI课程申请要求",
+      "斯坦福在线AI项目介绍"
     ],
-    "key_point": "https://arxiv.org/abs/2510.17558 Abstract: We propose an extension of the decoder Transformer that conditions its generative ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:26:46.843257"
+    "key_point": "视频主要讲解了如何以及何时报名斯坦福的在线AI课程，强调需要分别提交两个申请，尤其是对想同时参加多个项目的学员。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:42:42.786623"
   },
   {
-    "video_id": "p7K3xfViWCE",
-    "title": "DeepSeek V4 AI Beats Billion Dollar Systems…For Free",
-    "channel": "Two Minute Papers",
-    "published_at": "2026-05-06T16:07:54Z",
+    "video_id": "1U-dyBiwDBw",
+    "title": "Stanford Online AI Programs Top Questions: What&#39;s the Learning Experience Like?",
+    "channel": "Stanford Online",
+    "published_at": "2026-05-04T23:16:50Z",
     "topics": [
-      "无法获取字幕"
+      "Stanford在线AI课程",
+      "学习体验",
+      "公开教学资源",
+      "学习动机"
     ],
-    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Check out DeepSeek here: ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:27:02.093074"
+    "key_point": "尽管大量学习材料已公开发布，学习者仍然对系统化的课程保持兴趣，因为课程提供了结构化的学习路径和互动体验。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:42:51.541459"
   },
   {
-    "video_id": "eCw33snvoNI",
-    "title": "NVIDIA&#39;s New AI Turns One Photo Into A World That Never Breaks",
-    "channel": "Two Minute Papers",
-    "published_at": "2026-05-03T17:02:48Z",
-    "topics": [
-      "无法获取字幕"
-    ],
-    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers The paper is available here: ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:27:07.098209"
+    "video_id": "nepKKz-MzFM",
+    "title": "FFmpeg: The Incredible Technology Behind Video on the Internet | Lex Fridman Podcast #496",
+    "channel": "Lex Fridman",
+    "published_at": "2026-05-06T22:03:16Z",
+    "topics": [],
+    "key_point": "视频主要讨论了FFmpeg这项技术在互联网视频中的重要作用，强调了代码质量的重要性，而非开发者身份。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:43:11.043054"
   },
   {
-    "video_id": "QzZ4VwDHAT4",
-    "title": "Sakana AI’s God Simulator Is Brilliant",
-    "channel": "Two Minute Papers",
-    "published_at": "2026-05-01T16:43:34Z",
-    "topics": [
-      "无法获取字幕"
-    ],
-    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Try it out! The paper is available here: ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:27:12.103367"
+    "video_id": "iKx3gAODybU",
+    "title": "Vikings, Ragnar, Berserkers, Valhalla &amp; the Warriors of the Viking Age | Lex Fridman Podcast #495",
+    "channel": "Lex Fridman",
+    "published_at": "2026-04-09T17:35:20Z",
+    "topics": [],
+    "key_point": "该视频主要讨论的是维京人、拉格纳、狂战士、瓦尔哈拉以及维京时代的战士，与大语言模型（LLM）无关。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:43:19.970312"
   },
   {
-    "video_id": "Sk9tvyRSCgY",
-    "title": "DeepMind’s New AI: A Gift To Humanity",
-    "channel": "Two Minute Papers",
-    "published_at": "2026-04-16T17:44:48Z",
+    "video_id": "H9rF1CSSh-w",
+    "title": "Jeff Kaplan: World of Warcraft, Overwatch, Blizzard, and Future of Gaming | Lex Fridman Podcast #493",
+    "channel": "Lex Fridman",
+    "published_at": "2026-03-11T20:21:39Z",
     "topics": [
       "无法获取字幕"
     ],
-    "key_point": "Check out Lambda here and sign up for their GPU Cloud: https://lambda.ai/papers Links: ...",
+    "key_point": "Jeff Kaplan is a legendary Blizzard lead game designer of World of Warcraft and Overwatch, now preparing to launch a new game ...",
     "relation": "无法判断",
-    "last_updated": "2026-05-07T05:27:17.108514"
+    "last_updated": "2026-05-08T00:43:26.327549"
   },
   {
-    "video_id": "mFSFvKquXwI",
-    "title": "NVIDIA’s New AI Shouldn’t Work…But It Does",
-    "channel": "Two Minute Papers",
-    "published_at": "2026-04-11T16:23:48Z",
+    "video_id": "dBFm3zm_3l8",
+    "title": "AI+Science: Accelerating Discovery",
+    "channel": "Stanford HAI",
+    "published_at": "2026-05-06T00:18:28Z",
     "topics": [
-      "无法获取字幕"
+      "AI与科学结合",
+      "加速科学发现",
+      "大语言模型在科研中的应用"
     ],
-    "key_point": "Check out Weights & Biases and sign up for a free demo here: https://wandb.me/papers The paper is available here: ...",
-    "relation": "无法判断",
-    "last_updated": "2026-05-07T05:27:22.113666"
+    "key_point": "视频探讨了大语言模型如何与科学研究结合，利用AI技术加速科学发现的进程。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:43:46.652742"
+  },
+  {
+    "video_id": "ieDG_GLfsco",
+    "title": "HAI Seminar: Predicting Child Labor in Ghana&#39;s Cocoa Industry",
+    "channel": "Stanford HAI",
+    "published_at": "2026-03-30T20:48:08Z",
+    "topics": [],
+    "key_point": "该视频介绍了如何利用数据分析和AI技术预测加纳可可产业中的童工问题，重点在于负责任的分析和人工智能应用。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:43:55.627676"
+  },
+  {
+    "video_id": "iOyaj5u0-DY",
+    "title": "HAI Seminar: Learning by Creating – A Human-Centered Vision for AI in Education",
+    "channel": "Stanford HAI",
+    "published_at": "2026-03-27T19:06:41Z",
+    "topics": [],
+    "key_point": "视频主要介绍了以人为中心的AI教育愿景，强调通过创造性学习推动教育发展，未具体涉及LLM相关技术细节。",
+    "relation": "独立内容",
+    "last_updated": "2026-05-08T00:44:04.726657"
   }
 ]

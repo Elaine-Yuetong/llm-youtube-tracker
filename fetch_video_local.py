@@ -1,44 +1,50 @@
 import json
 import os
 import time
+import requests
+import urllib.request
+import urllib.error
+import re
+import html
+import http.cookiejar
 from datetime import datetime
-from googleapiclient.discovery import build
 from openai import OpenAI
-from youtube_transcript_api import YouTubeTranscriptApi
+from dotenv import load_dotenv
 
-
+load_dotenv()
 
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
-APIYI_TOKEN = os.environ.get("OPENAI_API_KEY")  # 注意：GitHub Secrets 里我们用 OPENAI_API_KEY 这个名字
+APIYI_TOKEN = os.environ.get("OPENAI_API_KEY")
 
 CHANNELS = [
-    {"name": "Andrej Karpathy", "id": "UCgM3vYNYOgB6Ux3Sq1nf8rA"},
-    {"name": "Stanford CS224U", "id": "UCBa5G_ASCnH6R64RZN4lDhg"},
-    {"name": "Lex Fridman", "id": "UCr6m10jmjZeF5M81dF-6yxA"},
-    {"name": "Stanford HAI", "id": "UC9ZM7K9t0x_XVwSf6p1kriw"},
+    {"name": "Andrej Karpathy", "id": "UCXUPKJO5MZQN11PqgIvyuvQ"},
+    {"name": "Stanford CS224U", "id": "UCBa5G_ESCn8Yd4vw5U-gIcg"},
+    {"name": "Lex Fridman", "id": "UCSHZKyawb77ixDdsGog4iWA"},
+    {"name": "Stanford HAI", "id": "UChugFTK0KyrES9terTid8vA"},
 ]
-# ==============================
 
-# 初始化客户端
-youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
 openai_client = OpenAI(
     api_key=APIYI_TOKEN,
     base_url="https://api.apiyi.com/v1"
 )
 
-def get_videos_from_channel(channel_id, max_results=5):
+def get_videos_from_channel(channel_id, max_results=3):
     """获取频道最新视频"""
-    request = youtube.search().list(
-        part='snippet',
-        channelId=channel_id,
-        order='date',
-        type='video',
-        maxResults=max_results
-    )
-    response = request.execute()
+    url = "https://www.googleapis.com/youtube/v3/search"
+    params = {
+        'part': 'snippet',
+        'channelId': channel_id,
+        'maxResults': max_results,
+        'order': 'date',
+        'type': 'video',
+        'key': YOUTUBE_API_KEY
+    }
+    
+    response = requests.get(url, params=params)
+    data = response.json()
     
     videos = []
-    for item in response['items']:
+    for item in data.get('items', []):
         videos.append({
             'video_id': item['id']['videoId'],
             'title': item['snippet']['title'],
@@ -48,25 +54,60 @@ def get_videos_from_channel(channel_id, max_results=5):
         })
     return videos
 
+
+
+import yt_dlp
+
 def get_transcript(video_id):
-    """用 youtube_transcript_api 获取字幕（兼容新旧版本）"""
+    """使用 yt-dlp 获取字幕"""
+    url = f"https://www.youtube.com/watch?v={video_id}"
+    
+    ydl_opts = {
+        'quiet': True,
+        'skip_download': True,
+        'writesubtitles': True,
+        'writeautomaticsub': True,
+        'subtitlesformat': 'vtt',
+        'cookiefile': 'cookies.txt',  # 使用 cookies 绕过限流
+    }
+    
     try:
-        from youtube_transcript_api import YouTubeTranscriptApi
-        
-        # 方法1：尝试新版 API（先实例化）
-        try:
-            transcript_list = YouTubeTranscriptApi().list_transcripts(video_id)
-            transcript = transcript_list.find_generated_transcript(['en', 'en-US', 'en-GB'])
-            lines = transcript.fetch()
-            full_text = ' '.join([line['text'] for line in lines])
-            print(f"  获取字幕成功（新版API），长度: {len(full_text)}")
-            return full_text
-        except:
-            # 方法2：尝试旧版 API（直接调用）
-            transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=['en', 'en-US', 'en-GB'])
-            full_text = ' '.join([line['text'] for line in transcript_list])
-            print(f"  获取字幕成功（旧版API），长度: {len(full_text)}")
-            return full_text
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+            
+            # 获取字幕
+            subtitles = info.get('automatic_captions', {}) or info.get('subtitles', {})
+            
+            if 'en' not in subtitles:
+                print(f"  没有英文字幕")
+                return None
+            
+            # 获取字幕 URL
+            caption_url = subtitles['en'][0]['url']
+            
+            # 下载字幕内容
+            import requests
+            response = requests.get(caption_url, cookies=requests.utils.cookiejar_from_dict(requests.utils.dict_from_cookiejar(ydl.cookiejar)))
+            response.raise_for_status()
+            
+            # 解析 VTT 格式
+            lines = response.text.split('\n')
+            text_parts = []
+            for line in lines:
+                line = line.strip()
+                if not line or '-->' in line or line.startswith('WEBVTT') or line.startswith('NOTE'):
+                    continue
+                line = re.sub(r'<[^>]+>', '', line)
+                if line:
+                    text_parts.append(line)
+            
+            full_text = ' '.join(text_parts)
+            if full_text:
+                print(f"  获取字幕成功，长度: {len(full_text)}")
+                return full_text
+            else:
+                print(f"  字幕为空")
+                return None
     except Exception as e:
         print(f"  获取字幕失败: {e}")
         return None
@@ -97,7 +138,6 @@ def summarize_with_gpt(transcript, title):
     content = response.choices[0].message.content
     content = content.strip()
     
-    # 清理 markdown 代码块
     if content.startswith("```json"):
         content = content[7:]
     elif content.startswith("```"):
