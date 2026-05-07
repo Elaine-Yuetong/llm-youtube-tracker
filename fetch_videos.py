@@ -47,57 +47,13 @@ def get_videos_from_channel(channel_id, max_results=5):
         })
     return videos
 
-import yt_dlp
-import requests
-import re
-
 def get_transcript(video_id):
-    """用 yt-dlp + cookies 获取字幕"""
-    url = f"https://www.youtube.com/watch?v={video_id}"
-    
-    ydl_opts = {
-        'skip_download': True,
-        'writesubtitles': True,
-        'writeautomaticsub': True,
-        'subtitlesformat': 'vtt',
-        'cookiefile': 'cookies.txt',  # 使用 cookies 绕过限速
-    }
-    
+    """用 youtube_transcript_api 获取字幕（不需要 cookies，更稳定）"""
     try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(url, download=False)
-            
-            # 获取自动生成的字幕
-            subtitles = info.get('automatic_captions', {})
-            if not subtitles:
-                subtitles = info.get('subtitles', {})
-            
-            if 'en' not in subtitles:
-                print(f"  没有英文字幕")
-                return None
-            
-            # 获取字幕 URL
-            caption_url = subtitles['en'][0]['url']
-            
-            # 下载字幕内容
-            response = requests.get(caption_url)
-            response.raise_for_status()
-            
-            # 解析 VTT 格式
-            lines = response.text.split('\n')
-            text_parts = []
-            for line in lines:
-                line = line.strip()
-                if not line or '-->' in line or line.startswith('WEBVTT') or line.startswith('NOTE'):
-                    continue
-                # 去掉 HTML 标签
-                line = re.sub(r'<[^>]+>', '', line)
-                if line:
-                    text_parts.append(line)
-            
-            full_text = ' '.join(text_parts)
-            print(f"  获取字幕成功，长度: {len(full_text)}")
-            return full_text
+        transcript_list = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
+        full_text = ' '.join([line['text'] for line in transcript_list])
+        print(f"  获取字幕成功，长度: {len(full_text)}")
+        return full_text
     except Exception as e:
         print(f"  获取字幕失败: {e}")
         return None
